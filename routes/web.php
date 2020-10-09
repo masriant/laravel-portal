@@ -16,23 +16,33 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/home', function () {
-    $nama = 'Masrianto';
-    return view('home', ['nama' => $nama]);
-});
-Route::get('/mahasiswa', function () {
-    $judul = 'Mahasiswa';
-    return view('mahasiswa', ['judul' => $judul]);
-});
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
-Route::get('/profile', function () {
-    return view('profile');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+// Route::get('/home', function () {
+//     $nama = 'Masrianto';
+//     return view('home', ['nama' => $nama]);
+// });
+// Route::get('/mahasiswa', function () {
+//     $judul = 'Mahasiswa';
+//     return view('mahasiswa', ['judul' => $judul]);
+// });
+// Route::get('/about', function () {
+//     return view('about');
+// });
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
+// Route::get('/profile', function () {
+//     return view('profile');
+// });
+
+
+// Route::get('/', 'PagesController@home');
+
+Route::get('/about', 'PagesController@about');
+Route::get('/about', [PagesController::class, 'about']);
+
+
+
+Route::get('/mahasiswa', 'MahasiswaController@index');
