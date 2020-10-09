@@ -17,7 +17,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 Route::get('/', function () {
-    return view('home');
+    return view('index');
+});
+Route::get('/home', function () {
+    $nama = 'Masrianto';
+    return view('home', ['nama' => $nama]);
+});
+Route::get('/mahasiswa', function () {
+    $judul = 'Mahasiswa';
+    return view('mahasiswa', ['judul' => $judul]);
 });
 Route::get('/about', function () {
     return view('about');

@@ -10,19 +10,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
     integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 
-  <title>Home!</title>
+  <title>@yield('title')</title>
 </head>
 
 <body>
-  <!-- terhubung ke profile -->
   @include('layouts.menu')
-  <div class="container">
-    <div class="row">
-      <div class="col-10">
-        @yield('content')
-      </div>
-    </div>
-  </div>
+  @yield('container')
+
   <!-- Optional JavaScript; choose one of the two! -->
 
   <!-- Option 1: Bootstrap Bundle with Popper.js -->
